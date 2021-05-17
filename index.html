@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body{
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #111;
+        color: #fff;
+        font-family: roboto;
+        display: flex;
+      }
+      .youtube-app{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .fixed-nav-bar{
+        width: 100%;
+        height: 10vh;
+        border-top: 1px solid #555;
+        position: fixed;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+      }
+      .nav-btn{
+        width: 20%;
+        height: 20vw;
+        border-radius: 50%;
+        border: none;
+        background-color: transparent;
+        color: #aaa;
+        transition: .3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        cursor: pointer;
+      }
+      .active{
+        color: white;
+      }
+      .nav-btn:hover{
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="youtube-app">
+
+      <div class="fixed-nav-bar">
+        <button class="nav-btn home">
+          <span class="material-icons">
+            home
+            </span>
+          Home</button>
+
+        <button class="nav-btn explore">
+          <span class="material-icons">
+            explore
+            </span>
+          Explore</button>
+
+        <button class="nav-btn create">
+          <span class="material-icons" style='font-size: 10vh;'>
+            add_circle_outline
+            </span>
+        </button>
+
+        <button class="nav-btn subcriptions">
+          <span class="material-icons">
+            subscriptions
+            </span>
+          Subscriptions</button>
+        
+        <button class="nav-btn library">
+          <span class="material-icons">
+            video_library
+            </span>
+          Library</button>
+      
+      </div>
+    </div>
+    
+
+
+    <script>
+     var btns = document.querySelectorAll('.nav-btn');
+
+     btns.forEach(e => {
+       e.addEventListener('click',()=>{
+         e.classList.toggle('active');
+       })
+     });
+
+    </script>
+  </body>
+</html>
